@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        #10242B,
+        #173B46,
+        #285766
+    );
+
+    color: #F5F1E8;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: clamp(20px, 4vw, 50px);
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+#more {
+    margin: 0 auto clamp(25px, 4vw, 40px);
+
+    text-align: center;
+
+    font-family:
+        'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+
+    font-size: clamp(25px, 5vw, 50px);
+
+    font-weight: bold;
+
+    color: #E8C66A;
+
+    letter-spacing: 1px;
+
+    line-height: 1.1;
+}
+
+
+/* =========================
+   MAIN GALLERY BOX
+   ========================= */
+
+.boxStart {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: clamp(18px, 3vw, 35px);
+
+    background: #122631;
+
+    border-radius: clamp(18px, 3vw, 28px);
+
+    border: 1px solid rgba(232, 198, 106, 0.3);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   PHOTO GALLERY
+   ========================= */
+
+.pic {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: clamp(10px, 2vw, 20px);
+
+    margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+
+/* =========================
+   PHOTOS
+   ========================= */
+
+.pic img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: clamp(12px, 2vw, 20px);
+
+    border: 2px solid rgba(232, 198, 106, 0.25);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+
+    transition: 0.2s ease;
+}
+
+
+/* PHOTO HOVER */
+
+.pic img:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(232, 198, 106, 0.7);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   VIDEO
+   ========================= */
+
+.video {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* VIDEO PLAYER */
+
+.video video {
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    border-radius: clamp(12px, 2vw, 20px);
+
+    border: 2px solid rgba(232, 198, 106, 0.25);
+
+    background-color: #0D1C22;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    #more {
+        font-size: clamp(24px, 6vw, 38px);
+    }
+
+    .boxStart {
+        padding: 20px;
+    }
+
+    .pic {
+        gap: 12px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    #more {
+        font-size: 25px;
+
+        margin-bottom: 22px;
+    }
+
+    .boxStart {
+        padding: 14px;
+
+        border-radius: 18px;
+    }
+
+    .pic {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 25px;
+    }
+
+    .pic img {
+        border-radius: 12px;
+    }
+
+    .video video {
+        border-radius: 12px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 8px;
+    }
+
+    #more {
+        font-size: 21px;
+    }
+
+    .boxStart {
+        padding: 11px;
+    }
+
+    .pic {
+        gap: 8px;
+    }
+
+    .pic img {
+        border-radius: 10px;
+    }
+}
+
+a {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 13px 20px;
+
+    background-color: #E8C66A;
+    color: #172A35;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-family: monospace;
+    font-size: clamp(12px, 1.8vw, 16px);
+    font-weight: bold;
+
+    border-radius: 50px;
+
+    transition: 0.2s ease;
+}
+
+a:hover {
+    background-color: #F5D98A;
+    color: #172A35;
+
+    box-shadow:
+        0 8px 25px rgba(232, 198, 106, 0.25);
+
+    transform: translateY(-2px);
+}
